@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 507888710040277683}
   - component: {fileID: 507888710040277682}
   m_Layer: 0
-  m_Name: FireSmall
+  m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507888710040277680}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 507888710472389878}
   m_Father: {fileID: 0}
@@ -49,9 +49,33 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 5
+        m_Name: SmokeSize
+        m_Overridden: 1
+      - m_Value: 5
+        m_Name: InnerFireSize
+        m_Overridden: 1
+      - m_Value: 7
+        m_Name: OuterFireSize
+        m_Overridden: 1
+      - m_Value: 0.4
+        m_Name: SmokeHeightOffset
+        m_Overridden: 1
+      - m_Value: 3
+        m_Name: SmokeAmount
+        m_Overridden: 1
     m_Vector2f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 15, y: 24}
+        m_Name: SmokeLifetime
+        m_Overridden: 1
+      - m_Value: {x: 5, y: 9}
+        m_Name: InnerFireLifetime
+        m_Overridden: 1
+      - m_Value: {x: 7, y: 9}
+        m_Name: OuterFireLifetime
+        m_Overridden: 1
     m_Vector3f:
       m_Array: []
     m_Vector4f:
@@ -72,6 +96,7 @@ VisualEffect:
       m_Array: []
 --- !u!73398921 &507888710040277682
 VFXRenderer:
+  serializedVersion: 1
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -86,12 +111,8 @@ VFXRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -137,7 +158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507888710472389877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: -0.092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 507888710040277681}
@@ -155,8 +176,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.5283019, g: 0.23222063, b: 0, a: 1}
-  m_Intensity: 0.5
-  m_Range: 10
+  m_Intensity: 50
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
